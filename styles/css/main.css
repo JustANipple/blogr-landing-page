@@ -4,6 +4,25 @@
 /* Gradient */
 /* Fonts */
 /* Media query */
+body {
+  font-size: 1rem;
+}
+
+.nav {
+  border-bottom-left-radius: 5rem;
+  font-family: "Overpass", sans-serif;
+  background: linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  position: relative;
+  overflow: hidden;
+  z-index: -2;
+}
+.nav .nav_pattern {
+  position: absolute;
+  z-index: -1;
+  transform: scale(3) translateY(4rem) translateX(2.5rem);
+  max-width: 26rem;
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/

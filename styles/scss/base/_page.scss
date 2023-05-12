@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+body {
+    font-size: v.$fs;
+}
+
+.nav {
+    border-bottom-left-radius: 5rem;
+    font-family: v.$ff-overpass;
+    background: v.$intro-gradient;
+    position: relative;
+    overflow: hidden;
+    z-index: -2;
+
+    .nav_pattern {
+        position: absolute;
+        z-index: -1;
+        transform: scale(3) translateY(4rem) translateX(2.5rem);
+        max-width: 26rem;
+    }
+}

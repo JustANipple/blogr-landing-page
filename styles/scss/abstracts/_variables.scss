@@ -14,7 +14,7 @@ $very-dark-black-blue: hsl(240, 10%, 16%); //footer background
 /* Gradient */
 $very-light-red: hsl(13, 100%, 72%); 
 $light-red: hsl(353, 100%, 62%);
-$intro-gradient: linear-gradient($very-light-red, $light-red); //intro/CTA mobile nav
+$intro-gradient: linear-gradient(150deg, $very-light-red, $light-red); //intro/CTA mobile nav
 $very-dark-gray-blue: hsl(237, 17%, 21%);
 $very-dark-desaturated-lue: hsl(237, 23%, 32%);
 $body-gradient: linear-gradient($very-dark-gray-blue, $very-dark-desaturated-lue); //background gradient body

@@ -16,23 +16,14 @@ body {
   padding-inline: 1.5rem;
   font-family: "Overpass", sans-serif;
   position: relative;
-  background: url(../../../images/bg-pattern-intro-mobile.svg), linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-  background-repeat: no-repeat;
+  background: url(../../images/bg-pattern-intro-mobile.svg) 37% 25% no-repeat, linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  text-align: center;
 }
 @media screen and (min-width: 48rem) {
   .nav {
     padding-block: 4rem;
     padding-inline: 10rem;
-  }
-}
-.nav .nav_pattern {
-  position: absolute;
-  transform: scale(3.5) translateY(0rem) translateX(0rem);
-  max-width: 26rem;
-}
-@media screen and (min-width: 48rem) {
-  .nav .nav_pattern {
-    transform: scale(8) translateY(0rem) translateX(6rem);
+    background: url(../../images/bg-pattern-intro-desktop.svg) 25% 46% no-repeat, linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   }
 }
 
@@ -88,21 +79,297 @@ p, h1, h2, h3, h4, h5, h6 {
   gap: 0;
   position: relative;
 }
+.nav_bar .bar_menu .menu_icon {
+  padding: 0;
+  width: 2.25rem;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+}
+.nav_bar .bar_menu .menu_icon .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+}
+.nav_bar .bar_menu .menu_icon .icons img {
+  margin-block: auto;
+}
+.nav_bar .bar_menu .menu_icon #menuOpen {
+  transform: translateX(-2rem);
+}
 .nav_bar .bar_menu .menu {
-  visibility: hidden;
-  background-color: hsl(0, 0%, 100%);
-  padding-block: 2rem;
-  padding-inline: 1.5rem;
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  border-radius: 0.25rem;
+  background-color: hsl(0, 0%, 100%);
+  padding-block: 2rem;
+  padding-inline: 1.5rem;
   position: absolute;
   top: 3.5rem;
   right: 0;
-  width: 20.25rem;
+  min-width: 20.5rem;
+  box-shadow: 0 1rem 3rem -1.5rem hsl(240, 2%, 79%);
+  overflow: hidden;
+  padding: 0;
+  max-height: 0;
 }
+.nav_bar .bar_menu .menu .menu_topics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.nav_bar .bar_menu .menu .menu_topics .topic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: inherit;
+}
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_header .header_type {
+  font-size: 1.125rem;
+  color: hsl(240, 10%, 16%);
+}
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_header .header_type:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  border: 1px solid transparent;
+  bottom: 0.125rem;
+  transition: all 0.5s ease-in-out;
+}
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_header .header_type:hover:before {
+  width: 80%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_header #listOpen {
+  color: hsl(207, 13%, 34%);
+}
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_header #arrowUp {
+  transform: rotateX(180deg);
+}
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(240, 6%, 94%);
+  padding-block: 1rem;
+  padding-inline: 0;
+  width: inherit;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
+}
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_list .list_element {
+  list-style-type: none;
+}
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_list .list_element .element_link {
+  text-decoration: none;
+  color: hsl(207, 13%, 34%);
+}
+.nav_bar .bar_menu .menu .menu_topics .topic #showList {
+  padding-block: 1rem;
+  max-height: 15rem;
+}
+.nav_bar .bar_menu .menu .menu_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.nav_bar .bar_menu .menu .menu_user .user_login {
+  text-decoration: none;
+  color: hsl(240, 10%, 16%);
+  font-size: 1.125rem;
+}
+.nav_bar .bar_menu .menu .menu_user .user_signup {
+  padding-block: 0.875rem 0.75rem;
+  padding-inline: 2.5rem;
+  border-radius: 100vw;
+  border: none;
+  background: linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  color: hsl(0, 0%, 100%);
+}
+.nav_bar .bar_menu #showMenu {
+  padding-block: 2rem;
+  padding-inline: 1.5rem;
+  max-height: 100rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .nav_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: unset;
+    align-items: center;
+    gap: 4rem;
+  }
+  .nav_bar .bar_logo {
+    max-width: unset;
+  }
+  .nav_bar .bar_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+  }
+  .nav_bar .bar_menu .menu_icon {
+    display: none;
+  }
+  .nav_bar .bar_menu .menu {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    background-color: transparent;
+    box-shadow: unset;
+    position: unset;
+    max-height: fit-content;
+    padding: 0;
+    width: inherit;
+    overflow: visible;
+  }
+  .nav_bar .bar_menu .menu .menu_topics {
+    width: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav_bar .bar_menu .menu .menu_topics .topic {
+    position: relative;
+  }
+  .nav_bar .bar_menu .menu .menu_topics .topic .topic_header .header_type {
+    color: hsl(240, 6%, 94%);
+    font-size: 1rem;
+  }
+  .nav_bar .bar_menu .menu .menu_topics .topic .topic_header #listOpen {
+    color: hsl(0, 0%, 100%);
+  }
+  .nav_bar .bar_menu .menu .menu_topics .topic .topic_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    padding-block: 0;
+    padding-inline: 0;
+    position: absolute;
+    top: 2rem;
+    box-shadow: 0 0 5rem -3rem black;
+    width: 10rem;
+  }
+  .nav_bar .bar_menu .menu .menu_topics .topic .topic_list .list_element .element_link {
+    color: hsl(240, 10%, 16%);
+  }
+  .nav_bar .bar_menu .menu .menu_topics .topic .topic_list .list_element .element_link:hover {
+    font-weight: 700;
+  }
+  .nav_bar .bar_menu .menu .menu_topics .topic #showList {
+    padding-block: 2rem;
+    padding-inline: 1.5rem 3rem;
+  }
+  .nav_bar .bar_menu .menu .menu_user {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav_bar .bar_menu .menu .menu_user .user_login {
+    color: hsl(240, 6%, 94%);
+    font-size: 1rem;
+  }
+  .nav_bar .bar_menu .menu .menu_user .user_signup {
+    background: hsl(0, 0%, 100%);
+    color: hsl(353, 100%, 62%);
+    font-weight: 600;
+  }
+}
+.nav_intro {
+  padding-block: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.nav_intro .intro_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(0, 0%, 100%);
+}
+.nav_intro .intro_text .intro_title {
+  font-size: 2.125rem;
+  padding-inline: 0.375rem;
+}
+@media screen and (min-width: 48rem) {
+  .nav_intro .intro_text .intro_title {
+    font-size: 3.875rem;
+  }
+}
+.nav_intro .intro_text .intro_desc {
+  font-size: 1.125rem;
+}
+@media screen and (min-width: 48rem) {
+  .nav_intro .intro_text .intro_desc {
+    font-size: 1.325rem;
+  }
+}
+.nav_intro .intro_btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+.nav_intro .intro_btn button {
+  border-radius: 100vw;
+  border: 1px solid hsl(0, 0%, 100%);
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  background-color: transparent;
+}
+.nav_intro .intro_btn .btn_start {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(353, 100%, 62%);
+}
+.nav_intro .intro_btn .btn_learn {
+  color: hsl(0, 0%, 100%);
+}
+
 /* Abstracts */
 /* Base */
 /* Components *//*# sourceMappingURL=main.css.map */

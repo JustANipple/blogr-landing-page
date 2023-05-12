@@ -3,20 +3,31 @@
 
 body {
     font-size: v.$fs;
+    position: relative;
+    z-index: -3;
 }
 
 .nav {
     border-bottom-left-radius: 5rem;
+    padding-block: 3.5rem;
+    padding-inline: 1.5rem;
     font-family: v.$ff-overpass;
-    background: v.$intro-gradient;
     position: relative;
-    overflow: hidden;
-    z-index: -2;
+    background: url(../../../images/bg-pattern-intro-mobile.svg), v.$intro-gradient;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: v.$min-width) {
+        padding-block: 4rem;
+        padding-inline: 10rem;
+    }
 
     .nav_pattern {
         position: absolute;
-        z-index: -1;
-        transform: scale(3) translateY(4rem) translateX(2.5rem);
+        transform: scale(3.5) translateY(0rem) translateX(0rem);
         max-width: 26rem;
+
+        @media screen and (min-width: v.$min-width) {
+            transform: scale(8) translateY(0rem) translateX(6rem);
+        }
     }
 }

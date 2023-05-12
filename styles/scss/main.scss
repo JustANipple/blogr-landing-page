@@ -5,3 +5,8 @@
 /* Base */
 @use "base/page";
 @use "base/reset";
+
+/* Components */
+@use "components/navBar";
+@use "components/navMenu";
+@use "components/navIntro";

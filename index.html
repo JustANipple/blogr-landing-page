@@ -21,11 +21,20 @@
 
   <!-- === Navigation bar ===-->
   <nav class="nav">
-    <img 
-    src="images/bg-pattern-intro-mobile.svg" 
-    alt=""
-    aria-hidden="true"
-    class="nav_pattern">
+    <div class="nav_background">
+      <picture class="background_img">
+        <source 
+        srcset="images/bg-pattern-intro-mobile.svg"
+        media="(min-width: 768px)">
+        <source 
+        srcset="images/bg-pattern-intro-desktop.svg"
+        media="(max-width: 769px)">
+        <img 
+        src="images/bg-pattern-intro-mobile.svg" 
+        alt=""
+        aria-hidden="true">
+      </picture>
+    </div>
     <!-- == Bar == -->
     <div class="nav_bar">
       <img 
@@ -39,59 +48,61 @@
         src="images/icon-hamburger.svg" 
         alt=""
         aria-hidden="true"
-        class="bar_menu_icon">
-        <!-- Topics -->
-        <div class="menu_topics">
-          <!--Product-->
-          <div class="topic">
-            <p class="topic_type">Product</p>
-            <img 
-            src="images/icon-arrow-dark.svg" 
-            alt=""
-            aria-hidden="true"
-            class="type_arrow">
-            <ul class="type_list">
-              <li class="list_element"> <a href="#" class="element_link">Overview</a> </li>
-              <li class="list_element"> <a href="#" class="element_link">Pricing</a> </li>
-              <li class="list_element"> <a href="#" class="element_link">Marketplace</a> </li>
-              <li class="list_element"> <a href="#" class="element_link">Features</a> </li>
-              <li class="list_element"> <a href="#" class="element_link">Integrations</a> </li>
-            </ul>
+        class="menu_icon">
+        <div class="menu">
+          <!-- Topics -->
+          <div class="menu_topics">
+            <!--Product-->
+            <div class="topic">
+              <p class="topic_type">Product</p>
+              <img 
+              src="images/icon-arrow-dark.svg" 
+              alt=""
+              aria-hidden="true"
+              class="type_arrow">
+              <ul class="type_list">
+                <li class="list_element"> <a href="#" class="element_link">Overview</a> </li>
+                <li class="list_element"> <a href="#" class="element_link">Pricing</a> </li>
+                <li class="list_element"> <a href="#" class="element_link">Marketplace</a> </li>
+                <li class="list_element"> <a href="#" class="element_link">Features</a> </li>
+                <li class="list_element"> <a href="#" class="element_link">Integrations</a> </li>
+              </ul>
+            </div>
+            <!--Company-->
+            <div class="topic">
+              <p class="topic_type">Company</p>
+              <img 
+              src="images/icon-arrow-dark.svg" 
+              alt=""
+              aria-hidden="true"
+              class="type_arrow">
+              <ul class="type_list">
+                <li class="list_element"> <a href="#" class="element_link">About</a> </li>
+                <li class="list_element"> <a href="#" class="element_link">Team</a> </li>
+                <li class="list_element"> <a href="#" class="element_link">Blog</a> </li>
+                <li class="list_element"> <a href="#" class="element_link">Careers</a> </li>
+              </ul>
+            </div>
+            <!--Connect-->
+            <div class="topic">
+              <p class="topic_type">Connect</p>
+              <img 
+              src="images/icon-arrow-dark.svg" 
+              alt=""
+              aria-hidden="true"
+              class="type_arrow">
+              <ul class="type_list">
+                <li class="list_element"> <a href="#" class="element_link">Contact</a> </li>
+                <li class="list_element"> <a href="#" class="element_link">Newsletter</a> </li>
+                <li class="list_element"> <a href="#" class="element_link">LinkedIn</a> </li>
+              </ul>
+            </div>
           </div>
-          <!--Company-->
-          <div class="topic">
-            <p class="topic_type">Company</p>
-            <img 
-            src="images/icon-arrow-dark.svg" 
-            alt=""
-            aria-hidden="true"
-            class="type_arrow">
-            <ul class="type_list">
-              <li class="list_element"> <a href="#" class="element_link">About</a> </li>
-              <li class="list_element"> <a href="#" class="element_link">Team</a> </li>
-              <li class="list_element"> <a href="#" class="element_link">Blog</a> </li>
-              <li class="list_element"> <a href="#" class="element_link">Careers</a> </li>
-            </ul>
-          </div>
-          <!--Connect-->
-          <div class="topic">
-            <p class="topic_type">Connect</p>
-            <img 
-            src="images/icon-arrow-dark.svg" 
-            alt=""
-            aria-hidden="true"
-            class="type_arrow">
-            <ul class="type_list">
-              <li class="list_element"> <a href="#" class="element_link">Contact</a> </li>
-              <li class="list_element"> <a href="#" class="element_link">Newsletter</a> </li>
-              <li class="list_element"> <a href="#" class="element_link">LinkedIn</a> </li>
-            </ul>
-          </div>
-        </div>
-        <!-- User -->
-        <div class="menu_user">
+          <!-- User -->
+          <div class="menu_user">
           <a href="#" class="user_login">Login</a>
           <button class="user_signup">Sign Up</button>
+        </div>
         </div>
       </div>
     </div>

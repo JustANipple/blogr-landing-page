@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.nav_bar {
+    @include m.flex-horizontal($justify-content: space-between);
+
+    .bar_logo {
+        max-width: 5rem;
+    }
+
+    .bar_menu {
+        @include m.flex-vertical();
+        position: relative;
+
+        //.menu_icon {}
+
+        .menu {
+            visibility: hidden;
+            background-color: v.$white;
+            padding-block: 2rem;
+            padding-inline: 1.5rem;
+            @include m.flex-vertical($gap: 2rem);
+            position: absolute;
+            top: 3.5rem;
+            right: 0;
+            width: 20.25rem;
+
+            .menu_topics {
+
+            }
+        }
+    }
+}

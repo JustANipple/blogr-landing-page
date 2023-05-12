@@ -6,21 +6,34 @@
 /* Media query */
 body {
   font-size: 1rem;
+  position: relative;
+  z-index: -3;
 }
 
 .nav {
   border-bottom-left-radius: 5rem;
+  padding-block: 3.5rem;
+  padding-inline: 1.5rem;
   font-family: "Overpass", sans-serif;
-  background: linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   position: relative;
-  overflow: hidden;
-  z-index: -2;
+  background: url(../../../images/bg-pattern-intro-mobile.svg), linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 48rem) {
+  .nav {
+    padding-block: 4rem;
+    padding-inline: 10rem;
+  }
 }
 .nav .nav_pattern {
   position: absolute;
-  z-index: -1;
-  transform: scale(3) translateY(4rem) translateX(2.5rem);
+  transform: scale(3.5) translateY(0rem) translateX(0rem);
   max-width: 26rem;
+}
+@media screen and (min-width: 48rem) {
+  .nav .nav_pattern {
+    transform: scale(8) translateY(0rem) translateX(6rem);
+  }
 }
 
 /*
@@ -57,5 +70,39 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+.nav_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.nav_bar .bar_logo {
+  max-width: 5rem;
+}
+.nav_bar .bar_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+.nav_bar .bar_menu .menu {
+  visibility: hidden;
+  background-color: hsl(0, 0%, 100%);
+  padding-block: 2rem;
+  padding-inline: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  width: 20.25rem;
+}
 /* Abstracts */
-/* Base *//*# sourceMappingURL=main.css.map */
+/* Base */
+/* Components *//*# sourceMappingURL=main.css.map */

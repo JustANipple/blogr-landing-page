@@ -2,6 +2,14 @@
 const listHeaders = document.querySelectorAll(".topic_header");
 const menuBtn = document.querySelector(".menu_icon");
 const menu = document.querySelector(".menu");
+const signUp = document.querySelector(".user_signup");
+const start = document.querySelector(".btn_start");
+const learn = document.querySelector(".btn_learn");
+
+/* Transitions */
+signUp.style.transition = "all .5s ease-in-out";
+start.style.transition = "all .5s ease-in-out";
+learn.style.transition = "all .5s ease-in-out";
 
 /* Events */
 for(const header of listHeaders) {

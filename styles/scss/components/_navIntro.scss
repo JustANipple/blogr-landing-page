@@ -49,10 +49,22 @@
         .btn_start {
             background-color: v.$white;
             color: v.$light-red;
+            cursor: pointer;
+
+            &:hover {
+                border-color: v.$very-light-red-user;
+                background-color: v.$very-light-red-user;
+                color: v.$white;
+            }
         }
 
         .btn_learn {
             color: v.$white;
+
+            &:hover {
+                background-color: v.$white;
+                color: v.$light-red;
+            }
         }
     }
 }

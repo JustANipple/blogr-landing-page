@@ -1,0 +1,85 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.designed_section {
+    font-family: v.$ff-overpass;
+    text-align: center;
+    @include m.flex-vertical($gap: 3rem);
+    padding-block: 6rem;
+
+    .section_title {
+        color: v.$very-dark-blue;
+        font-size: calc(v.$fs * 1.675);
+        font-weight: v.$fw-overpass-semibold;
+    }
+
+    .section_content {
+        @include m.flex-horizontal($gap: 4rem);
+        flex-wrap: wrap;
+
+        //.content_img{}
+
+        .content_text {
+            @include m.flex-vertical($gap: 2rem);
+            padding-inline: 2.5rem;
+
+            .text_paragraph {
+                @include m.flex-vertical($gap: 1.5rem);
+
+                .paragraph_title {
+                    font-size: calc(v.$fs * 1.75);
+                    color: v.$very-dark-blue;
+                    line-height: 1.125;
+                    width: 100%;
+                }
+
+                .paragraph_description {
+                    color: v.$very-dark-black-blue;
+                    line-height: 1.75;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: v.$min-width) {
+    .designed_section {
+        padding-block: 5rem;
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+
+        .section_title {
+            font-size: calc(v.$fs * 2.5);
+            position: absolute;
+            top: 10rem;
+            text-align: center;
+        }
+
+        .section_content {
+            gap: 1rem;
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;
+
+            .content_img {
+                flex: 1;
+                flex-basis: 0;
+
+                img {
+                    max-width: unset;
+                    display: unset;
+                    transform: translateX(17rem);
+                }
+            }
+
+            .content_text {
+                flex: 2;
+                flex-basis: 0;
+                padding: 0;
+                padding-block-start: 2rem;
+                transform: translateX(11rem);
+                gap: 5rem;
+            }
+        }
+    }
+}

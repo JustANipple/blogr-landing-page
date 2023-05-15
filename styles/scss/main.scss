@@ -7,6 +7,8 @@
 @use "base/reset";
 
 /* Components */
+/* Nav */
 @use "components/navBar";
-@use "components/navMenu";
 @use "components/navIntro";
+/* Design section */
+@use "components/sectionDesign";

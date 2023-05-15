@@ -61,24 +61,23 @@
                         overflow: hidden;
                         cursor: pointer;
 
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            border: 1px solid transparent;
+                            bottom: .125rem;
+                            transition: all .5s ease-in-out;
+                        }
+
+                        &:hover:before {
+                            width: 75%;
+                            border: 1px solid v.$white;
+                        }
+
                         .header_type {
                             font-size: calc(v.$fs * 1.125);
                             color: v.$very-dark-black-blue;
-                            
-
-                            &:before {
-                                content: "";
-                                position: absolute;
-                                width: 0;
-                                border: 1px solid transparent;
-                                bottom: .125rem;
-                                transition: all .5s ease-in-out;
-                            }
-
-                            &:hover:before {
-                                width: 80%;
-                                border: 1px solid v.$white;
-                            }
                         }
 
                         #listOpen {
@@ -143,6 +142,12 @@
                     border: none;
                     background: v.$intro-gradient;
                     color: v.$white;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: v.$very-light-red-user;
+                        color: v.$white;
+                    }
                 }
             }
         }
@@ -185,7 +190,7 @@
 
                 .menu_topics {
                     width: unset;
-                    @include m.flex-horizontal($gap: 2rem);
+                    @include m.flex-horizontal($gap: 2.5rem);
 
                     .topic {
                         position: relative;
@@ -201,16 +206,18 @@
                                 color: v.$white;
                             }
 
-                            //.header_arrow {}
+                            .header_arrow {
+                                width: .75rem;
+                            }
                         }
 
                         .topic_list {
-                            @include m.flex-vertical($align-items: flex-start, $gap: 1rem);
+                            @include m.flex-vertical($align-items: flex-start, $gap: .5rem);
                             background-color: v.$white;
                             padding-block: 0;
                             padding-inline: 0;
                             position: absolute;
-                            top: 2rem;
+                            top: 3rem;
                             box-shadow: 0 0 5rem -3rem black;
                             width: 10rem;
 

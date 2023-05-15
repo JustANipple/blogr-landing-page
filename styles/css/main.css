@@ -11,17 +11,17 @@ body {
 }
 
 .nav {
-  border-bottom-left-radius: 5rem;
+  border-bottom-left-radius: 7rem;
   padding-block: 3.5rem;
   padding-inline: 1.5rem;
   font-family: "Overpass", sans-serif;
   position: relative;
-  background: url(../../images/bg-pattern-intro-mobile.svg) 37% 25% no-repeat, linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background: url(../../images/bg-pattern-intro-mobile.svg) 35% 35% no-repeat, linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   text-align: center;
 }
 @media screen and (min-width: 48rem) {
   .nav {
-    padding-block: 4rem;
+    padding-block: 3.5rem 1.5rem;
     padding-inline: 10rem;
     background: url(../../images/bg-pattern-intro-desktop.svg) 25% 46% no-repeat, linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   }
@@ -197,7 +197,13 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
+  width: 100%;
+}
+.nav_bar .bar_menu .menu .menu_user::before {
+  content: "";
+  width: 100%;
+  border-top: 1px solid hsl(240, 6%, 94%);
 }
 .nav_bar .bar_menu .menu .menu_user .user_login {
   text-decoration: none;
@@ -224,7 +230,7 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
     justify-content: unset;
     align-items: center;
-    gap: 4rem;
+    gap: 4.5rem;
   }
   .nav_bar .bar_logo {
     max-width: unset;
@@ -301,9 +307,12 @@ p, h1, h2, h3, h4, h5, h6 {
   .nav_bar .bar_menu .menu .menu_user {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     gap: 2rem;
+  }
+  .nav_bar .bar_menu .menu .menu_user::before {
+    display: none;
   }
   .nav_bar .bar_menu .menu .menu_user .user_login {
     color: hsl(240, 6%, 94%);
@@ -321,7 +330,12 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .nav_intro {
+    padding-block: 7.5rem;
+  }
 }
 .nav_intro .intro_text {
   display: flex;

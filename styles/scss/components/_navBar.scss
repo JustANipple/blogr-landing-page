@@ -121,7 +121,14 @@
             }
 
             .menu_user {
-                @include m.flex-vertical($gap: 1rem);
+                @include m.flex-vertical($gap: 1.25rem);
+                width: 100%;
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    border-top: 1px solid v.$light-grayish-blue;
+                }
 
                 .user_login {
                     text-decoration: none;
@@ -150,7 +157,7 @@
 
 @media screen and (min-width: v.$min-width) {
     .nav_bar {
-        @include m.flex-horizontal($justify-content: unset, $gap: 4rem);
+        @include m.flex-horizontal($justify-content: unset, $gap: 4.5rem);
 
         .bar_logo {
             max-width: unset;
@@ -227,7 +234,11 @@
                 }
 
                 .menu_user {
-                    @include m.flex-horizontal($gap: 2rem);
+                    @include m.flex-horizontal($gap: 2rem, $justify-content: flex-end);
+
+                    &::before {
+                        display: none;
+                    }
     
                     .user_login {
                         color: v.$light-grayish-blue;

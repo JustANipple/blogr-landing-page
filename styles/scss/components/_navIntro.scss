@@ -3,7 +3,11 @@
 
 .nav_intro {
     padding-block: 6.5rem;
-    @include m.flex-vertical($gap: 3rem);
+    @include m.flex-vertical($gap: 2.5rem);
+
+    @media screen and (min-width: v.$min-width) {
+        padding-block: 7.5rem;
+    }
 
     .intro_text {
         @include m.flex-vertical($gap: .5rem);

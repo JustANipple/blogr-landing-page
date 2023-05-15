@@ -144,7 +144,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   cursor: pointer;
 }
-.nav_bar .bar_menu .menu .menu_topics .topic .topic_header:before {
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_header::before {
   content: "";
   position: absolute;
   width: 0;
@@ -152,7 +152,7 @@ p, h1, h2, h3, h4, h5, h6 {
   bottom: 0.125rem;
   transition: all 0.5s ease-in-out;
 }
-.nav_bar .bar_menu .menu .menu_topics .topic .topic_header:hover:before {
+.nav_bar .bar_menu .menu .menu_topics .topic .topic_header:hover::before {
   width: 75%;
   border: 1px solid hsl(0, 0%, 100%);
 }
@@ -605,8 +605,124 @@ p, h1, h2, h3, h4, h5, h6 {
   color: hsl(207, 13%, 34%);
 }
 
+@media screen and (min-width: 48rem) {
+  .tool_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+    padding-block: 19rem;
+    padding-inline: 10rem;
+  }
+  .tool_section .laptop_img {
+    flex: 1;
+    flex-basis: 0;
+  }
+  .tool_section .laptop_img img {
+    max-width: 100%;
+    transform: unset;
+    transform: scale(2) translateX(-6.5rem);
+  }
+  .tool_section .tool_content {
+    flex: 1;
+    flex-basis: 0;
+    text-align: left;
+    padding-inline-start: 0;
+    gap: 4rem;
+  }
+  .tool_section .tool_content .content_text {
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+.footer {
+  background-color: hsl(240, 10%, 16%);
+  padding-block: 5.5rem;
+  border-top-right-radius: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+.footer .footer_logo {
+  margin-inline: auto;
+  padding-bottom: 2rem;
+}
+.footer .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.125rem;
+}
+.footer .list .list_header {
+  font-weight: 500;
+}
+.footer .list .topic_list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer .list .topic_list li a {
+  text-decoration: none;
+  color: hsl(240, 2%, 79%);
+}
+
+@media screen and (min-width: 48rem) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12rem;
+    padding-block: 4rem 5.5rem;
+    padding-inline: 10rem;
+  }
+  .footer .footer_logo {
+    margin-inline: unset;
+    padding: 0;
+  }
+  .footer .list {
+    font-size: 1rem;
+    text-align: start;
+    align-items: unset;
+  }
+  .footer .list .list_header {
+    padding-top: 0.5rem;
+  }
+  .footer .list .topic_list {
+    text-align: start;
+    align-items: unset;
+  }
+  .footer .list .topic_list li a {
+    position: relative;
+  }
+  .footer .list .topic_list li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    border: 1px solid transparent;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .footer .list .topic_list li a:hover::before {
+    width: 100%;
+    border: 1px solid hsl(240, 2%, 79%);
+  }
+}
 /* Abstracts */
 /* Base */
 /* Components */
 /* Nav */
-/* Section *//*# sourceMappingURL=main.css.map */
+/* Section */
+/* Footer *//*# sourceMappingURL=main.css.map */

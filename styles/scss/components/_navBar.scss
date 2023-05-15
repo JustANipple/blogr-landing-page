@@ -61,7 +61,7 @@
                         overflow: hidden;
                         cursor: pointer;
 
-                        &:before {
+                        &::before {
                             content: "";
                             position: absolute;
                             width: 0;
@@ -70,7 +70,7 @@
                             transition: all .5s ease-in-out;
                         }
 
-                        &:hover:before {
+                        &:hover::before {
                             width: 75%;
                             border: 1px solid v.$white;
                         }

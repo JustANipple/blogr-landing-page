@@ -37,3 +37,35 @@
         }
     }
 }
+
+@media screen and (min-width: v.$min-width) {
+    .tool_section {
+        @include m.flex-horizontal($gap: 4rem);
+        padding-block: 19rem;
+        padding-inline: 10rem;
+
+        .laptop_img {
+            flex: 1;
+            flex-basis: 0;
+
+            img {
+                max-width: 100%;
+                transform: unset;
+                transform: scale(2) translateX(-6.5rem);
+            }
+        }
+
+        .tool_content {
+            flex: 1;
+            flex-basis: 0;
+            text-align: left;
+            padding-inline-start: 0;
+            gap: 4rem;
+
+            .content_text {
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.infrastructure_section {
+    @include m.flex-vertical();
+    border-top-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+    position: relative;
+    background: url(../../../images/bg-pattern-circles.svg), v.$body-gradient;
+    background-repeat: no-repeat;
+    background-size: 600px 600px, 100% 900px;
+    background-position: center -15rem;
+    padding-block: 14rem 7rem;
+    padding-inline: 2rem;
+    
+
+    .infrastructure_img {
+
+        .img_phones {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-inline: auto;
+            top: -11rem;
+        }
+    }
+
+    .infrastructure_content {
+        @include m.flex-vertical($gap: 1.5rem);
+        text-align: center;
+        font-family: v.$ff-overpass;
+        color: v.$white;
+
+        .content_title {
+            font-size: calc(v.$fs * 2.5);
+            line-height: 1.25;
+        }
+
+        .content_paragraph {
+            line-height: 1.75;
+        }
+    }
+}
+
+@media screen and (min-width: v.$min-width) {
+    .infrastructure_section {
+        @include m.flex-horizontal($gap: 1.5rem);
+        padding-block: 0;
+        max-height: 25rem;
+        padding-inline: 5rem;
+        background-size: 1014px 1018px, 120% 1000px;
+        background-position: -13rem -32rem;
+
+        .infrastructure_img {
+            flex: 1;
+            flex-basis: 0;
+
+            .img_phones {
+                position: relative;
+                top: 1rem;
+            }
+        }
+
+        .infrastructure_content {
+            flex: 1;
+            flex-basis: 0;
+            align-items: flex-start;
+            text-align: left;
+
+            .content_title {
+                font-size: calc(v.$fs * 2.375);
+            }
+
+            .content_paragraph {
+                padding-inline-end: 8rem;
+            }
+        }
+    }
+}

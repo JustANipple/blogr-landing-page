@@ -18,7 +18,7 @@ $light-red: hsl(353, 100%, 62%);
 $intro-gradient: linear-gradient(150deg, $very-light-red, $light-red); //intro/CTA mobile nav
 $very-dark-gray-blue: hsl(237, 17%, 21%);
 $very-dark-desaturated-lue: hsl(237, 23%, 32%);
-$body-gradient: linear-gradient($very-dark-gray-blue, $very-dark-desaturated-lue); //background gradient body
+$body-gradient: linear-gradient(150deg, $very-dark-gray-blue, $very-dark-desaturated-lue); //background gradient body
 
 /* Fonts */
 $fs: 1rem;

@@ -431,6 +431,7 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding-block-end: 11rem;
   padding-inline: 2.5rem;
 }
 .designed_section .section_content .content_text .text_paragraph {
@@ -442,6 +443,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .designed_section .section_content .content_text .text_paragraph .paragraph_title {
   font-size: 1.75rem;
+  font-weight: 600;
   color: hsl(208, 49%, 24%);
   line-height: 1.125;
   width: 100%;
@@ -453,7 +455,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 48rem) {
   .designed_section {
-    padding-block: 5rem;
+    padding-block: 5rem 3rem;
     text-align: left;
     position: relative;
     overflow: hidden;
@@ -487,8 +489,84 @@ p, h1, h2, h3, h4, h5, h6 {
     gap: 5rem;
   }
 }
+.infrastructure_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  border-top-right-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+  position: relative;
+  background: url(../../../images/bg-pattern-circles.svg), linear-gradient(150deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  background-repeat: no-repeat;
+  background-size: 600px 600px, 100% 900px;
+  background-position: center -15rem;
+  padding-block: 14rem 7rem;
+  padding-inline: 2rem;
+}
+.infrastructure_section .infrastructure_img .img_phones {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  top: -11rem;
+}
+.infrastructure_section .infrastructure_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+.infrastructure_section .infrastructure_content .content_title {
+  font-size: 2.5rem;
+  line-height: 1.25;
+}
+.infrastructure_section .infrastructure_content .content_paragraph {
+  line-height: 1.75;
+}
+
+@media screen and (min-width: 48rem) {
+  .infrastructure_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: 0;
+    max-height: 25rem;
+    padding-inline: 5rem;
+    background-size: 1014px 1018px, 120% 1000px;
+    background-position: -13rem -32rem;
+  }
+  .infrastructure_section .infrastructure_img {
+    flex: 1;
+    flex-basis: 0;
+  }
+  .infrastructure_section .infrastructure_img .img_phones {
+    position: relative;
+    top: 1rem;
+  }
+  .infrastructure_section .infrastructure_content {
+    flex: 1;
+    flex-basis: 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .infrastructure_section .infrastructure_content .content_title {
+    font-size: 2.375rem;
+  }
+  .infrastructure_section .infrastructure_content .content_paragraph {
+    padding-inline-end: 8rem;
+  }
+}
 /* Abstracts */
 /* Base */
 /* Components */
 /* Nav */
-/* Design section *//*# sourceMappingURL=main.css.map */
+/* Design section */
+/* Infrastructure section *//*# sourceMappingURL=main.css.map */

@@ -564,9 +564,49 @@ p, h1, h2, h3, h4, h5, h6 {
     padding-inline-end: 8rem;
   }
 }
+.tool_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  overflow-x: hidden;
+  padding-block: 4rem;
+}
+.tool_section .laptop_img img {
+  max-width: unset;
+  display: unset;
+  transform: translateX(-3.75rem);
+}
+.tool_section .tool_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+  padding-inline: 2.5rem;
+}
+.tool_section .tool_content .content_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.tool_section .tool_content .content_text .text_title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: hsl(208, 49%, 24%);
+}
+.tool_section .tool_content .content_text .text_paragraph {
+  line-height: 1.75;
+  color: hsl(207, 13%, 34%);
+}
+
 /* Abstracts */
 /* Base */
 /* Components */
 /* Nav */
-/* Design section */
-/* Infrastructure section *//*# sourceMappingURL=main.css.map */
+/* Section *//*# sourceMappingURL=main.css.map */

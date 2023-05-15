@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.tool_section {
+    @include m.flex-vertical($gap: 1.5rem);
+    overflow-x: hidden;
+    padding-block: 4rem;
+
+    .laptop_img {
+        
+        img{
+            max-width: unset;
+            display: unset;
+            transform: translateX(-3.75rem);
+        }
+    }
+
+    .tool_content {
+        @include m.flex-vertical($gap: 2rem);
+        font-family: v.$ff-overpass;
+        text-align: center;
+        padding-inline: 2.5rem;
+
+        .content_text {
+            @include m.flex-vertical($gap: 2rem);
+
+            .text_title {
+                font-size: calc(v.$fs * 1.75);
+                font-weight: v.$fw-overpass-semibold;
+                color: v.$very-dark-blue;
+            }
+
+            .text_paragraph {
+                line-height: 1.75;
+                color: v.$very-dark-grayish-blue;
+            }
+        }
+    }
+}

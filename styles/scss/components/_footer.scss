@@ -14,7 +14,7 @@
     }
 
     .list {
-        @include m.flex-vertical($gap: 1.5rem);
+        @include m.flex-vertical($gap: 1.75rem);
         color: v.$white;
         font-size: calc(v.$fs * 1.125);
 

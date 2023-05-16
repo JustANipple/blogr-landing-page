@@ -656,7 +656,7 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.75rem;
   color: hsl(0, 0%, 100%);
   font-size: 1.125rem;
 }

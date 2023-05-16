@@ -485,6 +485,7 @@ p, h1, h2, h3, h4, h5, h6 {
     transform: translateX(17rem);
   }
   .designed_section .section_content .content_text {
+    align-items: flex-start;
     flex: 2;
     flex-basis: 0;
     padding: 0;
@@ -634,6 +635,7 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: left;
     padding-inline-start: 0;
     gap: 4rem;
+    align-items: flex-start;
   }
   .tool_section .tool_content .content_text {
     align-items: flex-start;

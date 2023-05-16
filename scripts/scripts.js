@@ -14,6 +14,7 @@ learn.style.transition = "all .5s ease-in-out";
 /* Events */
 for(const header of listHeaders) {
     header.addEventListener("click", () => {
+        closeLists(header);
         showList(header);
     });
 }
@@ -54,5 +55,18 @@ function showMenu(menuBtn) {
     } else {
         menu.setAttribute("id", "showMenu");
         btnImg.setAttribute("id", "menuOpen");
+    }
+}
+
+function closeLists(obj) {
+    for(const header of listHeaders) {
+        if(header !== obj) {
+            const list = header.parentElement.querySelector(".topic_list");
+            const arrow = header.querySelector(".header_arrow");
+            const name = header.querySelector(".header_type");
+            list.setAttribute("id", "");
+            arrow.setAttribute("id", "");
+            name.setAttribute("id", "");
+        }
     }
 }

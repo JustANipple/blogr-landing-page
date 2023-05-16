@@ -574,7 +574,7 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  overflow-x: hidden;
+  overflow: hidden;
   padding-block: 4rem;
 }
 .tool_section .laptop_img img {

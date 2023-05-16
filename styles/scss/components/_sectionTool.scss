@@ -3,7 +3,7 @@
 
 .tool_section {
     @include m.flex-vertical($gap: 1.5rem);
-    overflow-x: hidden;
+    overflow: hidden;
     padding-block: 4rem;
 
     .laptop_img {

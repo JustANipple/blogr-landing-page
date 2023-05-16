@@ -1,6 +1,10 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: v.$fs;
     position: relative;

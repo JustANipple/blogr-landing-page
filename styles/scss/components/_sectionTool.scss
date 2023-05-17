@@ -2,16 +2,14 @@
 @use "../abstracts/mixins" as m;
 
 .tool_section {
-    @include m.flex-vertical($gap: 1.5rem);
+    @include m.flex-vertical($gap: 5rem);
     overflow: hidden;
-    padding-block: 4rem;
+    padding-block: 6rem 5rem;
 
     .laptop_img {
         
         img{
-            max-width: unset;
-            display: unset;
-            transform: translateX(-3.75rem);
+            transform: scale(1.25);
         }
     }
 

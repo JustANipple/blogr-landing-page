@@ -37,8 +37,6 @@
             @include m.flex-vertical($gap: 2rem);
             border-radius: .25rem;
             background-color: v.$white;
-            padding-block: 2rem;
-            padding-inline: 1.5rem;
             position: absolute;
             top: 3.5rem;
             right: 0;
@@ -153,9 +151,9 @@
         }
 
         #showMenu {
+            max-height: 36rem;
             padding-block: 2rem;
             padding-inline: 1.5rem;
-            max-height: 100rem;
         }
     }
 }

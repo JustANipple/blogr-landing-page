@@ -3,29 +3,30 @@
 
 .infrastructure_section {
     @include m.flex-vertical();
-    border-top-right-radius: 6rem;
-    border-bottom-left-radius: 6rem;
-    position: relative;
-    background: url(../../../images/bg-pattern-circles.svg), v.$body-gradient;
-    background-repeat: no-repeat;
-    background-size: 600px 600px, 100% 900px;
-    background-position: center -15rem;
-    padding-block: 14rem 7rem;
-    padding-inline: 2rem;
+
     
 
     .infrastructure_img {
+        height: 200px;
 
         .img_phones {
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin-inline: auto;
-            top: -11rem;
+            position: relative;
+            z-index: 1;
+            max-width: 23rem;
         }
     }
 
     .infrastructure_content {
+        border-top-right-radius: 6rem;
+        border-bottom-left-radius: 6rem;
+        position: relative;
+        background: url(../../../images/bg-pattern-circles.svg), v.$body-gradient;
+        background-repeat: no-repeat;
+        background-size: 600px 600px, 100% 900px;
+        background-position: center -15rem;
+        padding-block: 14rem 7rem;
+        padding-inline: 2rem;
+
         @include m.flex-vertical($gap: 1.5rem);
         text-align: center;
         font-family: v.$ff-overpass;
@@ -45,23 +46,30 @@
 @media screen and (min-width: v.$min-width) {
     .infrastructure_section {
         @include m.flex-horizontal($gap: 1.5rem);
-        padding-block: 0;
-        max-height: 25rem;
-        padding-inline: 5rem;
-        background-size: 1014px 1018px, 120% 1000px;
-        background-position: -13rem -32rem;
+        position: relative;
+
 
         .infrastructure_img {
             flex: 1;
             flex-basis: 0;
+            position: absolute;
+            top: -4rem;
+            left: 7rem;
 
             .img_phones {
-                position: relative;
-                top: 1rem;
+                max-width: unset;
             }
         }
 
         .infrastructure_content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-block: 7rem;
+            max-height: 25rem;
+            padding-inline: 5rem;
+            background-size: 1014px 1018px, 120% 1000px;
+            background-position: -13rem -32rem;
+
             flex: 1;
             flex-basis: 0;
             align-items: flex-start;
@@ -69,10 +77,12 @@
 
             .content_title {
                 font-size: calc(v.$fs * 2.375);
+                grid-column: 2;
             }
 
             .content_paragraph {
                 padding-inline-end: 8rem;
+                grid-column: 2;
             }
         }
     }

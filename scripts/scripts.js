@@ -47,8 +47,8 @@ function showList(header) {
 
 function showMenu(menuBtn) {
     const btnImg = menuBtn.querySelector(".icons");
-    btnImg.style.transition = "all .5s linear";
-    menu.style.transition = "all 1s linear";
+    btnImg.style.transition = "all .25s linear";
+    menu.style.transition = "all .25s linear";
     if(menu.getAttribute("id") === "showMenu") {
         menu.setAttribute("id", "");
         btnImg.setAttribute("id", "");

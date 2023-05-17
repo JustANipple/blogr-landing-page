@@ -5,7 +5,7 @@
     font-family: v.$ff-overpass;
     text-align: center;
     @include m.flex-vertical($gap: 3rem);
-    padding-block: 6rem;
+    padding-block: 6rem 0;
 
     .section_title {
         color: v.$very-dark-blue;
@@ -14,14 +14,14 @@
     }
 
     .section_content {
-        @include m.flex-horizontal($gap: 4rem);
+        @include m.flex-horizontal($gap: 4rem, $justify-content: center);
         flex-wrap: wrap;
 
         //.content_img{}
 
         .content_text {
             @include m.flex-vertical($gap: 2rem);
-            padding-block-end: 11rem;
+            padding-block-end: 5rem;
             padding-inline: 2.5rem;            
 
             .text_paragraph {

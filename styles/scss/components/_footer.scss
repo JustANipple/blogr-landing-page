@@ -41,9 +41,9 @@
 
 @media screen and (min-width: v.$min-width) {
     .footer {
-        @include m.flex-horizontal($align-items: flex-start, $gap: 12rem);
+        @include m.flex-horizontal($align-items: flex-start, $justify-content: space-between);
         padding-block: 4rem 5.5rem;
-        padding-inline: 10rem;
+        padding-inline: 10rem 22rem;
 
         .footer_logo {
             margin-inline: unset;
